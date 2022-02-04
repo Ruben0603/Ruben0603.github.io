@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <title>Ruben Mooren</title>
+</head>
+<body id="home">
+    <canvas id="container"></canvas>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#languages">Languages</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="lib.html">School</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contenthome">
+            <div class="contenthome_left">
+                <img src="img/profilePicture.jpg" alt="Picture of me">
+            </div> 
+            <div class="contenthome_right">
+                <div class="titleHome">
+                    <h1>Hi there, i'm 
+                    <br> <span>Ruben Mooren</span> </h1>
+                    <h2>Student at Roc Nijmegen.</h2>
+                </div>
+            </div>
+        </div>
+        <div id="about" class="contentabout">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+        </div>
+        <div id="languages" class="contentlanguages">
+            <div class="text_languages">
+                <h3>Languages i learned</h3>
+            </div>
+            <ul class="languages_list">
+                <li class="html">
+                    <div class="image_holder">
+                       <img src="img/html-logo.png" alt="html logo">
+                    </div>
+                    <div class="percentagebarcontainer">
+                        <div class="percentagebar_languages">
+                            <div id="percentagebar_html" class="percentagebar" style="width:60%">60%</div>
+                        </div>
+                        <input type="submit" class="percentagebar_button" value="Click Me" onclick="move_html()"></input> 
+                    </div>
+                    <script>
+                        function move_html() {
+                          var elem = document.getElementById("percentagebar_html");  
+                          var width = 0;
+                          var id = setInterval(frame, 20);
+                          function frame() {
+                            if (width >= 60) {
+                              clearInterval(id);
+                            } else {
+                              width++; 
+                              elem.style.width = width + '%'; 
+                              elem.innerHTML = width * 1  + '%';
+                            }
+                          }
+                        }
+                    </script>
+                </li>
+                <li class="python">
+                    <div class="image_holder">
+                        <img src="img/python-logo.png" alt="python logo">
+                    </div>
+                    <div class="percentagebarcontainer">
+                        <div class="percentagebar_languages">
+                            <div id="percentagebar_python" class="percentagebar" style="width:40%">40%</div>
+                        </div>
+                        <input type="submit" class="percentagebar_button" value="Click Me" onclick="move_python()"></input> 
+                    </div>
+                    <script>
+                        function move_python() {
+                          var elem = document.getElementById("percentagebar_python");  
+                          var width = 0;
+                          var id = setInterval(frame, 20);
+                          function frame() {
+                            if (width >= 40) {
+                              clearInterval(id);
+                            } else {
+                              width++; 
+                              elem.style.width = width + '%'; 
+                              elem.innerHTML = width * 1  + '%';
+                            }
+                          }
+                        }
+                    </script>
+                </li>
+                <li class="java">
+                    <div class="image_holder">
+                        <img src="img/java-logo.png" alt="java logo">
+                    </div>
+                    <div class="percentagebarcontainer">
+                        <div class="percentagebar_languages">
+                            <div id="percentagebar_java" class="percentagebar" style="width:25%">25%</div>
+                        </div>
+                        <input type="submit" class="percentagebar_button" value="Click Me" onclick="move_java()"></input>
+                    </div>
+                    <script>
+                        function move_java() {
+                          var elem = document.getElementById("percentagebar_java");  
+                          var width = 0;
+                          var id = setInterval(frame, 20);
+                          function frame() {
+                            if (width >= 25) {
+                              clearInterval(id);
+                            } else {
+                              width++; 
+                              elem.style.width = width + '%'; 
+                              elem.innerHTML = width * 1  + '%';
+                            }
+                          }
+                        }
+                    </script>
+                </li>
+                <li class="php">
+                    <div class="image_holder">
+                        <img src="img/php-logo.png" alt="php logo">
+                    </div>
+                    <div class="percentagebarcontainer">
+                        <div class="percentagebar_languages">
+                            <div id="percentagebar_php" class="percentagebar" style="width:30%">30%</div>
+                        </div>
+                        <input type="submit" class="percentagebar_button" value="Click Me" onclick="move_php()"></input>
+                    </div>
+                    <script>
+                        function move_php() { 
+                          var elem = document.getElementById("percentagebar_php");  
+                          var width = 0;
+                          var id = setInterval(frame, 20);
+                          function frame() {
+                            if (width >= 30) {
+                              clearInterval(id);
+                            } else {
+                              width++; 
+                              elem.style.width = width + '%'; 
+                              elem.innerHTML = width * 1  + '%';
+                            }
+                          }
+                        }
+                    </script>
+                </li>
+            </ul>
+        </div>   
+        <div id="contact" class="contentcontact">
+            <div class="contactform">
+                <form>
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            
+                <label for="lname">Email</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            
+                <label for="subject">Message</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            
+                <input type="submit" value="Submit">
+                </form>
+            </div>
+          </div>   
+    </main>
+    <footer>
+        <div class="footertop">
+            <div class="linksfooter">
+                <h5>Usefull links</h5>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#languages">Languages</a></li>
+                    <li><a href="lib.html">School</a></li>
+                </ul>
+            </div>
+            <div class="contactfooter">
+                <h5>Contact</h5>
+                <p>
+                    <i class="fas fa-home"></i>&nbsp; Beuningen, 6641 JS, NL
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>&nbsp; Moorenruben@gmail.com
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i>&nbsp; +31 6 5276968
+                </p>
+            </div>
+            </div>
+        </div>
+        <div class="footerbelow">
+            <div class="copyright">
+                <p>Copyright ©2022 All rights reserved by:
+                    <strong>Ruben Mooren</strong>
+                </p>
+            </div> 
+            <div class="socials">
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/rubenmooren/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/home">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100007153545663">
+                            <i class="fab fa-facebook" ></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>   
+        </div>
+    </footer>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
